@@ -1,0 +1,12 @@
+<h1> list all blogs </h1>
+
+<% @blogs.each do |blog|%>
+
+    <%= link_to blog.title, blog %>
+    <%= link_to 'Delete', blog, data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} %> <br/>
+
+
+
+<% end %>
+<%= link_to "Add a new Blog", new_blog_post_path %> <br/>
+<%= @blog_count %>

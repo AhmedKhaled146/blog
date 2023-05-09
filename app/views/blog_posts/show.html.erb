@@ -1,0 +1,4 @@
+<%= link_to "edit", edit_blog_post_path(@blog) if user_signed_in? %>
+<%= @blog.title %>
+
+<%= link_to "back", root_path %>

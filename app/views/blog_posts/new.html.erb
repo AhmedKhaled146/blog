@@ -1,0 +1,16 @@
+Hi new blog
+
+<%= form_for @blog do |f| %>
+    <% if @blog.errors.any? %>
+        <% @blog.errors.full_messages.each do |msg| %>
+            <%= msg %>
+        <% end %>
+    <% end %>
+    <%= f.label :title %>:
+    <%= f.text_field :title %><br/>
+
+    <%= f.label :body %>:
+    <%= f.text_field :body %><br/>
+
+    <%= f.submit %>
+<% end %>
